@@ -1,0 +1,8 @@
+{
+  "name": "DoodleBot Coloring Pages",
+  "description": "An AI illustrator for a magical children's colouring app. DoodleBot creates wonderful, simple, and fun colouring pages for kids based on their ideas.",
+  "icon": "/components/icons/AppIcon.svg",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
