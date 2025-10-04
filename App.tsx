@@ -1,3 +1,4 @@
+
 import React, { useState, useCallback, useEffect } from 'react';
 import Header from './components/Header';
 import PromptForm from './components/PromptForm';
@@ -82,6 +83,11 @@ function App() {
 
   const generateDrawing = useCallback(async (currentPrompt: string) => {
     if (!currentPrompt.trim() || isLoading) return;
+
+    if (!navigator.onLine) {
+        setError("You seem to be offline! Please check your connection to create new drawings.");
+        return;
+    }
 
     setIsLoading(true);
     setError(null);
